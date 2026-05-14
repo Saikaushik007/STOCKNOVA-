@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: stocknova-terminal
-    env: python
-    buildCommand: "pip install -r backend/requirements.txt"
-    startCommand: "cd backend && gunicorn server:app"
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10.0
