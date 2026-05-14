@@ -23,6 +23,10 @@ def serve_frontend():
 def serve_static(path):
     return send_from_directory(app.static_folder, path)
 
+@app.route('/api/ping')
+def ping():
+    return "OK", 200
+
 if __name__ == '__main__':
     # Ensure cache directory exists
     os.makedirs('cache', exist_ok=True)
